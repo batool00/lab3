@@ -106,20 +106,23 @@ ggplot(data = plastic_waste,
        mapping = aes(x = plastic_waste_per_cap, 
                      color = continent, 
                      fill = continent)) +
-  geom_density(alpha = 0.7)
+  geom_density(alpha = 0.1)
 ```
 
 This still doesn’t look great…
 
 E2. Recreate the density plots above using a different (lower) alpha
 level that works better for displaying the density curves for all
-continents.
+continents. ggplot(data = plastic\_waste, + mapping = aes(x =
+plastic\_waste\_per\_cap, + color = continent, + fill = continent)) + +
+geom\_density(alpha = 0.4) E3. Describe why we defined the `color` and
+`fill` of the curves by mapping aesthetics of the plot but we defined
+the `alpha` level as a characteristic of the plotting geom.
 
-E3. Describe why we defined the `color` and `fill` of the curves by
-mapping aesthetics of the plot but we defined the `alpha` level as a
-characteristic of the plotting geom.
-
-Answer here:
+Answer here:because here we represent a set of data (continents),not
+just color control, as the colors here belong to the continents , and
+also the filling is related to the continents but the alpha it’s talking
+about all graphic (gemo\_density)
 
 *Now is a good time to knit your document and commit and push your
 changes to GitHub with an appropriate commit message. Make sure to
