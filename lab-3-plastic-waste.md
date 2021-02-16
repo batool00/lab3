@@ -1,11 +1,11 @@
 Lab 3 - Plastic Waste
 ================
 DSC 200 - Data Science I
-2021-02-06
+2021-02-16
 
-Student Name:
+Student Name:batool alsadah
 
-Student ID:
+Student ID:2201003400
 
 ``` r
 library(tidyverse)
@@ -47,15 +47,8 @@ kg/person.
 
 ``` r
 plastic_waste %>%
-  filter(plastic_waste_per_cap > 3.5)
+filter(plastic_waste_per_cap > 3.5)
 ```
-
-    ## # A tibble: 1 x 10
-    ##   code  entity continent  year gdp_per_cap plastic_waste_p… mismanaged_plas…
-    ##   <chr> <chr>  <chr>     <dbl>       <dbl>            <dbl>            <dbl>
-    ## 1 TTO   Trini… North Am…  2010      31261.              3.6             0.19
-    ## # … with 3 more variables: mismanaged_plastic_waste <dbl>, coastal_pop <dbl>,
-    ## #   total_pop <dbl>
 
 Did you expect this result? You might consider doing some research on
 Trinidad and Tobago to see why plastic waste per capita is so high
@@ -64,6 +57,17 @@ there, or whether this is a data error.
 E1. Plot, using histograms, the distribution of plastic waste per capita
 faceted by continent. What can you say about how the continents compare
 to each other in terms of their plastic waste per capita?
+
+``` r
+ggplot(data = plastic_waste,
++        mapping = aes(x = plastic_waste_per_cap,
++                      color = continent,
++                      fill = continent)) +
++     geom_histogram(alpha = 0.7)
+```
+
+answer:the africa is the most density continent and the south amreca is
+the most continent in plastic weste per cap.
 
 **NOTE:** From this point onwards the plots and the output of the code
 are not displayed in the lab instructions, but you can and should write
@@ -172,7 +176,7 @@ use](https://ggplot2.tidyverse.org/reference/index.html#section-geoms).
 E8. Recreate the following plot, and interpret what you see in context
 of the data.
 
-![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Knit, *commit (with an appropriate message), and push your changes to
 GitHub with an appropriate commit message. Make sure to commit and push
