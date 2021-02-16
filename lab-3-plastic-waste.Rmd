@@ -162,7 +162,7 @@ continent,fill = continent,
               y = plastic_waste_per_cap)) +
 geom_point()
 ```
-
+anwer : europe (positive) relationship ,africa is the most a (mismanged _ plastic waste per cap)
 E7.  Visualize the relationship between plastic waste per capita and total population as well as plastic waste per capita and coastal population.
     You will need to make two separate plots.
     Do either of these pairs of variables appear to be more strongly linearly associated?
